@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+
+    .card {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+}
