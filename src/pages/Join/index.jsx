@@ -10,9 +10,12 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 
 const JoinPage = () => {
+  const navigate = useNavigate();
+
   const [locations, setLocations] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
 
@@ -33,6 +36,10 @@ const JoinPage = () => {
     setSelectedLocations(typeof value === "string" ? value.split(",") : value);
   };
 
+  const handleSubmit = () => {
+    navigate(`/view?locations=${selectedLocations}`);
+  };
+
   return (
     <Box display="flex" className="container" justifyContent="space-around">
       <Card variant="outlined" className="card">
@@ -40,7 +47,8 @@ const JoinPage = () => {
           Controle de fluxo de àgua de bueiros e bocas de lobos
         </Typography>
         <Typography variant="subtitle1">
-          Selecione as localidades que deseja acompanhar:
+          Selecione as localidades que deseja acompanhar ou deixe em branco para
+          acompanhar todos:
         </Typography>
         <Stack spacing={3}>
           <Select
@@ -62,7 +70,9 @@ const JoinPage = () => {
               </MenuItem>
             ))}
           </Select>
-          <Button variant="contained">Confirmar</Button>
+          <Button variant="contained" onClick={handleSubmit}>
+            Confirmar
+          </Button>
         </Stack>
       </Card>
     </Box>
