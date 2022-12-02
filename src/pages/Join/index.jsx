@@ -44,7 +44,7 @@ const JoinPage = () => {
     <Box display="flex" className="container" justifyContent="space-around">
       <Card variant="outlined" className="card">
         <Typography variant="h6" className="title">
-          Controle de fluxo de àgua de bueiros e bocas de lobos
+          Controle de fluxo de àgua de bueiros e bocas de lobo
         </Typography>
         <Typography variant="subtitle1">
           Selecione as localidades que deseja acompanhar ou deixe em branco para

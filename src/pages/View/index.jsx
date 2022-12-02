@@ -185,14 +185,6 @@ const ViewPage = ({ hasAdmin }) => {
             <form onSubmit={newLocationFormik.handleSubmit}>
               <Grid container display="flex" flexDirection="column">
                 <Grid item paddingY={2}>
-                  {/* <Input
-                    id="name"
-                    type="text"
-                    onChange={newLocationFormik.handleChange}
-                    onBlur={newLocationFormik.handleBlur}
-                    value={newLocationFormik.values.name}
-                    fullWidth
-                  /> */}
                   <Autocomplete
                     freeSolo
                     id="name"
